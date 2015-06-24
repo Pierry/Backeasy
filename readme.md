@@ -1,5 +1,17 @@
 ![](https://raw.githubusercontent.com/Pierry/Backeasy/master/art/logo.png)
-https://github.com/Pierry/Backeasy/issues
+
 Features
 =======================
 
+- Domain driven-design start
+- Domain entities
+- Contracts (Interfaces)
+- Repository Pattern
+- Specification Pattern
+- ActiveAndroid (Database)
+- Dependency Injection - IoC (RoboGuice)
+- View Injection & Threads (Android Annotations)
+- SOLID
+
+Credits
+======================
