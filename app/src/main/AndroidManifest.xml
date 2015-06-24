@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.pierry.backeasy"
+    >
+
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:name=".BackeasyApp"
+      android:theme="@style/AppTheme"
+      >
+    <meta-data
+        android:name="AA_DB_NAME"
+        android:value="backeasy.db"
+        />
+    <meta-data
+        android:name="AA_DB_VERSION"
+        android:value="1"
+        />
+    <meta-data
+        android:name="AA_MODELS"
+        android:value="com.github.pierry.backeasy.domain.entities.User"
+        />
+
+    <activity
+        android:name=".MainActivity_"
+        android:label="@string/app_name"
+        >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>
