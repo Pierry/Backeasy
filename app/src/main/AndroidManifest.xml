@@ -11,6 +11,10 @@
       android:theme="@style/AppTheme"
       >
     <meta-data
+        android:name="roboguice.modules"
+        android:value="com.github.pierry.backeasy.di.Container"
+        />
+    <meta-data
         android:name="AA_DB_NAME"
         android:value="backeasy.db"
         />
