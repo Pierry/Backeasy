@@ -1,15 +1,10 @@
 package com.github.pierry.backeasy.domain.contracts.repositories;
 
 import com.github.pierry.backeasy.domain.entities.User;
-import java.util.List;
 
-public interface IUserRepository {
-
-  List<User> get(int page);
-
-  User getById(int id);
+public interface IUserRepository extends IRepositoryBase<User> {
 
   User getByUsername(String user);
 
-  void create(User user);
+  void delete(int id);
 }

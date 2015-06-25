@@ -20,11 +20,14 @@
         />
     <meta-data
         android:name="AA_DB_VERSION"
-        android:value="1"
+        android:value="2"
         />
     <meta-data
         android:name="AA_MODELS"
-        android:value="com.github.pierry.backeasy.domain.entities.User"
+        android:value="com.github.pierry.backeasy.domain.entities.User,
+        com.github.pierry.backeasy.domain.entities.Order,
+        com.github.pierry.backeasy.domain.entities.OrderItem,
+        com.github.pierry.backeasy.domain.entities.Product"
         />
 
     <activity
