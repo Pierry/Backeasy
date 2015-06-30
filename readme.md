@@ -13,5 +13,10 @@ Features
 - View Injection & Threads (Android Annotations)
 - SOLID
 
+Layers
+=====================
+
+![](https://raw.githubusercontent.com/Pierry/Backeasy/master/art/patterns-diagram.png)
+
 Credits
 ======================
