@@ -18,5 +18,7 @@ Layers
 
 ![](https://raw.githubusercontent.com/Pierry/Backeasy/master/art/patterns-diagram.png)
 
-Credits
-======================
+License
+==========
+
+[Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
