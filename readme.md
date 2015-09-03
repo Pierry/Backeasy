@@ -1,5 +1,8 @@
 ![](https://raw.githubusercontent.com/Pierry/Backeasy/master/art/logo.png)
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Backeasy-green.svg?style=flat)](https://android-arsenal.com/details/2438/3)
+
+
 Features
 =======================
 
