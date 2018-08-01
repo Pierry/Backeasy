@@ -37,7 +37,10 @@ public class MainActivity extends BaseActivity implements IMainView {
   }
 
   @OnClick(R.id.login) void loginClick() {
-    presenter.logon(email.getText().toString(), username.getText().toString(), password.getText().toString());
+    String emailText = email.getText().toString();
+    String passwordText = password.getText().toString();
+    String usernameText = username.getText().toString();
+    presenter.logon(emailText, usernameText, passwordText);
   }
 
   @Override protected void onStart() {

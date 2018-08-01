@@ -1,13 +1,12 @@
 package com.github.pierry.backeasy.core.domain;
 
-public class User {
+import com.github.pierry.backeasy.core.support.Assertion;
+
+public class User implements Specification {
 
   private String username;
   private String password;
   private String email;
-
-  public User() {
-  }
 
   public User(String username, String password, String email) {
     this.username = username;
@@ -29,5 +28,12 @@ public class User {
 
   @Override public String toString() {
     return username;
+  }
+
+  @Override public void isValid() throws Exception {
+    Assertion assertion = new Assertion();
+    assertion.isNull(username).isEmpty(username).errors("Username");
+    assertion.isNull(password).isEmpty(password).lengthMin(password, 6).errors("Password");
+    assertion.isNull(email).isEmpty(email).isEmail(email).errors("E-mail");
   }
 }
