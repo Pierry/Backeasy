@@ -20,6 +20,7 @@ dependencies {
 
   // butter knife
   implementation 'com.jakewharton:butterknife:8.8.1'
+  annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
   // timber
   implementation 'com.jakewharton.timber:timber:4.7.1'

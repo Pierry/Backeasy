@@ -2,8 +2,11 @@ package com.github.pierry.backeasy.dashboard.presentation.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -19,7 +22,8 @@ public class MainActivity extends BaseActivity implements IMainView {
   @BindView(R.id.email) EditText email;
   @BindView(R.id.username) EditText username;
   @BindView(R.id.password) EditText password;
-  @BindView(R.id.logon) Button logIn;
+  @BindView(R.id.login) Button logIn;
+  @BindView(R.id.progressBar) ProgressBar progressBar;
 
   @Inject IMainPresenter presenter;
 
@@ -27,18 +31,46 @@ public class MainActivity extends BaseActivity implements IMainView {
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    BackeasyApp.getControllerComponent(this).inject(this);
     setContentView(R.layout.activity_main);
-    bind = ButterKnife.bind(this);
+    ButterKnife.bind(this);
+    BackeasyApp.getControllerComponent(this).inject(this);
   }
 
-  @OnClick(R.id.logon) void logonClick() {
+  @OnClick(R.id.login) void loginClick() {
     presenter.logon(email.getText().toString(), username.getText().toString(), password.getText().toString());
   }
 
   @Override protected void onStart() {
     presenter.onStart(this);
     super.onStart();
+  }
+
+  @Override public void showLoader() {
+    runOnUiThread(() -> {
+      if (progressBar != null) {
+        progressBar.setVisibility(View.VISIBLE);
+      }
+    });
+  }
+
+  @Override public void hideLoader() {
+    runOnUiThread(() -> {
+      if (progressBar != null) {
+        progressBar.setVisibility(View.GONE);
+      }
+    });
+  }
+
+  @Override public void noContent() {
+    showToast(getString(R.string.no_content));
+  }
+
+  @Override public void noInternet() {
+    showToast(getString(R.string.no_internet));
+  }
+
+  @Override public void showToast(String msg) {
+    runOnUiThread(() -> Toast.makeText(this, msg, Toast.LENGTH_SHORT).show());
   }
 
   @Override protected void onStop() {
