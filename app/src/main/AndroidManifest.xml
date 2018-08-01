@@ -1,45 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.pierry.backeasy"
-    >
+    package="com.github.pierry.backeasy">
 
   <application
-      android:allowBackup="true"
+      android:allowBackup="false"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
-      android:name=".BackeasyApp"
+      android:name=".core.BackeasyApp"
       android:theme="@style/AppTheme"
-      >
-    <meta-data
-        android:name="roboguice.modules"
-        android:value="com.github.pierry.backeasy.di.Container"
-        />
-    <meta-data
-        android:name="AA_DB_NAME"
-        android:value="backeasy.db"
-        />
-    <meta-data
-        android:name="AA_DB_VERSION"
-        android:value="2"
-        />
-    <meta-data
-        android:name="AA_MODELS"
-        android:value="com.github.pierry.backeasy.domain.entities.User,
-        com.github.pierry.backeasy.domain.entities.Order,
-        com.github.pierry.backeasy.domain.entities.OrderItem,
-        com.github.pierry.backeasy.domain.entities.Product"
-        />
+  >
 
     <activity
-        android:name=".MainActivity_"
-        android:label="@string/app_name"
-        >
+        android:name=".dashboard.presentation.view.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity android:name=".core.presentation.view.BaseActivity"/>
   </application>
 
 </manifest>

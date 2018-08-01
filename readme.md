@@ -2,22 +2,18 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Backeasy-green.svg?style=flat)](https://android-arsenal.com/details/2438/3)
 
-To do
-========
-
-- Change RoboGuice to Dagger 2
-
 Features
 =======================
 
+- VIPER
 - Domain driven-design start
 - Domain entities
 - Contracts (Interfaces)
 - Repository Pattern
 - Specification Pattern
-- ActiveAndroid (Database)
-- Dependency Injection - IoC (RoboGuice)
-- View Injection & Threads (Android Annotations)
+- RoomDb e LiveData
+- Dependency Injection - IoC (Dagger2)
+- View Injection - ButterKnife
 - SOLID
 
 Layers
